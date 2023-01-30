@@ -15,37 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- nav bar -->
 
-    <!-- <nav class="nav-container">
-        
-          <a class="navbrand" href="#"><h3>Lets<span style="color: rgb(255, 153, 0);">Build</span></h3></a>
-          <div class="menu-hamburger">
-                <i class="fa-solid fa-bars open"></i>
-                <i class="fa-solid fa-xmark close"></i>
-          </div>
-
-            <ul class="navlinks">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-      </nav> -->
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid nav-container">
           <a class="navbar-brand logo fs-5" href="#">Lets<span style="color: rgb(255, 153, 0);">Build</span></a>
@@ -83,12 +57,12 @@
 
       <!-- hero -->
       <section class="hero">
-        <div class="hero-text">
+        <div class="hero-text " data-aos="fade-right">
             <h1>Excellence in Construction, Every Step of the Way</h1>
             <p>Transforming Spaces and Enhancing Communities through Quality Construction and Project Management</p>
             <a href="#">Learn More</a>
         </div>
-        <div class="img">
+        <div class="img" data-aos="fade-left">
             <img src="images/pngwing.com.png" alt="">
         </div>
       </section>
@@ -106,32 +80,32 @@
         <h3>Our Services</h3>
         <p>What we do</p>
         <div class="body">
-            <div class="box">
+            <div class="box" data-aos="flip-up">
                 <img src="images/service-1.png" alt="">
                 <h4>Building Construction</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi tempore fuga aliquid sit inventore cupiditate!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-up">
                 <img src="images/service-2.png" alt="">
                 <h4>Renovation</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi tempore fuga aliquid sit inventore cupiditate!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-up">
                 <img src="images/service-3.png" alt="">
                 <h4>Architecture</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi tempore fuga aliquid sit inventore cupiditate!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-up">
                 <img src="images/service-4.png" alt="">
                 <h4>Site Preparation</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi tempore fuga aliquid sit inventore cupiditate!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-up">
                 <img src="images/service-5.png" alt="">
                 <h4>Project Management</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi tempore fuga aliquid sit inventore cupiditate!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-up">
                 <img src="images/service-6.png" alt="">
                 <h4>Design and planning services</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi tempore fuga aliquid sit inventore cupiditate!</p>
@@ -142,7 +116,7 @@
       <!-- projects -->
       <section class="project">
         <h3>Our Projects</h3>
-        <p>"Our projects section showcases a selection of our completed and ongoing projects, displaying our expertise and attention to detail in every job we undertake. From residential to commercial, and from new builds to renovations, our team has the skills and experience to bring your vision to life. Browse our portfolio to see the quality of our work and the wide range of projects we have completed. We pride ourselves on delivering projects on time, on budget and to the highest standards."</p>
+        <p>We have worked on ground breaking projects.</p>
                 <!-- Slider main container -->
         <div class="swiper">
             <!-- Slides -->
@@ -209,30 +183,35 @@
       </div>
       </section>
 
-      <header>
-        <h1>Contact Us</h1>
-      </header>
-      <main>
+      <section class="contact">
+        
+        <h3>Contact us</h3>
         <p>Have a question or want to learn more about our services? Fill out the form below and we'll get back to you as soon as possible.</p>
-        <form action="submit-form.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <input type="submit" value="Submit">
-        </form>
-      </main>
+        <div class="contact-container">
+          <form action="#" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Submit">
+          </form>
+          <div></div>
+
+        </div>
+        
+      </section>
 
 
 
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-    
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
