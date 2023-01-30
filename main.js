@@ -36,12 +36,12 @@ var swiper = new Swiper(".swiper", {
 
 // nav
 
-const opennav = document.querySelector(".menu-hamburger")
-const close = document.querySelector(".close")
-const nav = document.querySelector(".nav-container")
+// const opennav = document.querySelector(".menu-hamburger")
+// const close = document.querySelector(".close")
+// const nav = document.querySelector(".nav-container")
 
-opennav.addEventListener("click", function() {
-  nav.classList.toggle("active")
+// opennav.addEventListener("click", function() {
+//   nav.classList.toggle("active")
 
-})
+// })
 

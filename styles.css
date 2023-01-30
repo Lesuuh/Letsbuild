@@ -28,16 +28,7 @@ h4{
     font-size: 1.3rem;
     color: rgb(21, 57, 165);
 }
-button{
-    width: 100px;
-    height: 40px;
-    background: rgb(21, 57, 165);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: .9rem;
-    cursor: pointer;
-}
+
 
 @media screen and (max-width:1000px) {
     h1{
@@ -51,70 +42,41 @@ button{
     }
 }
 /* nav */
-
 nav{
-    background: #fff;
     background: rgb(254,254,255);
     background: linear-gradient(90deg, rgba(254,254,255,1) 0%, rgba(234,234,235,1) 36%, rgba(242,242,242,1) 100%);
     border-bottom: 1px solid rgb(255, 153, 0);
+    z-index: 1;
+    padding: 0 50px;
+}
+nav .logo{
+    font-weight: 600;
 }
 
 .nav-container{
     width: 100%;
-    height: 70px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     padding: 0 100px;
 }
-.navbrand{
-    font-weight: 600;
-    /* width: 50%; */
-}
-
-.navlinks{
-    list-style: none;
-    display: flex;
-    font-weight: 550;
-}
-
-.navlinks li{
-    padding: 0 20px;
-}
-.navlinks li a:hover{
+.navbar ul li:active{
     color: rgb(255, 153, 0);
 }
-.menu-hamburger{
-    display: none;
-    font-size: 1.2rem;
-  
+
+.navbar ul li a{
+    color: #333;
+}
+.navbar ul li a:hover{
+    color: rgb(255, 153, 0);
 }
 
-.active{
-    height: 300px;
-}
+
 @media  screen and (max-width:1000px) {
     .nav-container{
-        padding: 17px 20px;
-        overflow: hidden;
-        align-items: center;
-        /* height: 300px; */
+        padding: 0 20px;
         
     }
    
-    .navlinks{
-        flex-flow: column;
-        width: 100%;
-        margin-top: 50px;
-    }
-    .menu-hamburger{
-        display: block;
-
-    }
-    .close{
-        display: none;
-    }
 }
 
 /* hero section */
@@ -127,13 +89,14 @@ nav{
     align-items: center;
     background: rgb(254,254,255);
     background: linear-gradient(90deg, rgba(254,254,255,1) 0%, rgba(234,234,235,1) 36%, rgba(242,242,242,1) 100%);
+ 
     
 }
 .hero .hero-text{
     width: 50%;
     display: flex;
     flex-flow: column;
-    z-index: 1;
+  
 
 }
 .hero .hero-text a{
@@ -320,4 +283,55 @@ nav{
     .project{
         padding: 0 20px;
     }
+  }
+
+  header {
+    background-color: #337ab7;
+    color: white;
+    text-align: center;
+    padding: 40px;
+  }
+  main {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #f2f2f2;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label, input, textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 1.2em;
+  }
+  input[type="text"], input[type="email"] {
+    border: none;
+    border-bottom: 2px solid #337ab7;
+    background-color: transparent;
+  }
+  textarea {
+    border: 2px solid #337ab7;
+  }
+  input[type="submit"] {
+    width: 200px;
+    background-color: #337ab7;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+  }
+  input[type="submit"]:hover {
+    background-color: #2e6da4;
   }
