@@ -29,6 +29,27 @@ h4{
     color: rgb(21, 57, 165);
 }
 
+.arrow{
+    position: fixed;
+    top: 80vh;
+    left: 85%;
+    background: rgb(255, 153, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: #fff;
+    z-index: 90000;
+}
+
+.arrow .icon{
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width:1000px) {
     h1{
@@ -70,6 +91,15 @@ nav .logo{
     color: rgb(255, 153, 0);
 }
 
+.quotebtn{
+    width: 150px;
+    height: 40px;
+    /* padding: 7px 10px; */
+    border: none;
+    background: rgb(21, 57, 165);
+    color: #fff;
+    /* border-radius: 10px; */
+}
 
 @media  screen and (max-width:1000px) {
     .nav-container{
@@ -79,10 +109,102 @@ nav .logo{
    
 }
 
+
+/* modal quote */
+.modal-quote{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.4);
+
+}
+
+.modal-quote .container{
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 40px;
+
+    
+}
+
+.modal-quote .container .box{
+    display: flex;
+    flex-flow: column;
+ 
+}
+.modal-quote .container .box input{
+    border: none;
+    height: 30px;
+    padding: 10px;
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+
+.modal-quote textarea{
+    height: 100px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid blue;
+    margin-top: 20px;
+}
+
+.modal-quote .submit{
+    align-self: center;
+ 
+    
+}
+
+.modal-quote button{
+    border: 2px solid rgb(21, 57, 165);
+    background: #fff;
+    color: rgb(21, 57, 165);
+    width: 100px;
+    height: 35px;
+    margin: 20px;
+    border-radius: 5px;
+    transition: .5s;
+}
+.modal-quote button:hover{
+    color: #fff;
+    background: rgb(21, 57, 165);
+}
+
+.modal-quote button:nth-child(2){
+    background: rgb(255, 153, 0);
+    color: #fff;
+    border: none;
+}
+.modal-quote button:nth-child(2):hover{
+    background: rgba(255, 153, 0, 0.8);
+}
+
+.activeModal{
+    display: flex;
+}
+
+@media screen and (max-width:1000px) {
+    .modal-quote .container{
+        width: 90%;
+    }
+}
+
+
 /* hero section */
 
 .hero{
     width: 100%;
+    height: 90vh;
     padding: 0 100px;
     display: flex;
     justify-content: space-between;
@@ -100,7 +222,7 @@ nav .logo{
 
 }
 .hero .hero-text a{
-    width: 25%;
+    width: 40%;
     text-align: center;
     padding: 10px;
     background: rgb(21, 57, 165);
@@ -108,16 +230,34 @@ nav .logo{
     margin-top: 20px;
 }
 
+.hero .img{
+    display: inline-block;
+    margin-left: 55px;
+    height: 80%;
+    width: 70%;
+    border-radius: 100%;
+    border: px solid black;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
 .hero img{
-    width: 550px;
-    height: 550px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
 }
 @media screen and (max-width:1000px) {
     .hero{
         flex-flow: column;
         padding: 0 20px;
+        align-items: flex-start;
     }
     .hero img{
         width: 300px;
@@ -132,20 +272,30 @@ nav .logo{
 }
 
 /* section images */
-
 .images{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    width: 100%;
-    /* height: 150px; */
+    width: 100%;    
+    margin-top: 60px;
     border-top: 1px solid gray;
-    margin-top: 50px;
+}
+
+.images h3{
+    margin-top: 20px;
+}
+
+.images-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+
 
 }
 
 .images img{
-    width: 300px;
+    width: 200px;
 }
 @media screen and (max-width:1000px) {
     .images img{
@@ -161,7 +311,7 @@ nav .logo{
 }
 
 .services p{
-    color: rgb(255, 153, 0);
+    color: #333;
 }
 
 .services .body{
@@ -206,10 +356,7 @@ nav .logo{
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
     
 }
-/* .services .body .box:hover{
-    background: rgb(21, 57, 165);
-    color: #fff;
-} */
+
 
 .services img{
     width: 50px;
@@ -238,30 +385,34 @@ nav .logo{
     text-align: center;
 }
 
+.project p{
+    color: #333;
+}
 
 
-.swiper {
+
+.project .swiper {
     margin-top: 50px;
     width: 100%;
     height: 300px;
 }
 
-.swiper img{
+.project .swiper img{
     width: 100%;
     height: 90%;
     /* transition: all .5s; */
 }
 
-.swiper .img{
+.project .swiper .img{
     position: relative; 
 }
 
-.swiper p{
+.project .swiper p{
     color: #fff;
     z-index: 2;
 }
 
-.swiper .text{
+.project .swiper .text{
     width: 100%;
     height: 60px;
     background: rgb(0, 0, 0);
@@ -272,11 +423,11 @@ nav .logo{
     padding: 20px;
     color: #fff;
 }
-.swiper #image{
+.project .swiper #image{
     transition: all .5s;
 }
 
-.swiper #image:hover{
+.project .swiper #image:hover{
     transform: scale(1.1);
     transition: all .5s;
 }
@@ -291,6 +442,70 @@ nav .logo{
     }
 }
 
+
+/* values */
+.values{
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+.values .text{
+    font-size: .9rem;
+    color: #333;
+    padding: 0 200px;
+}
+
+.values .container{
+    width: 100%;
+    display: flex;
+    /* height: 300px; */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.values .container .box{
+    width: 25%;
+    height: auto;
+
+   
+}
+
+.values .container .box p{
+    color: #333;
+}
+
+.values .container .box .icon{
+    font-size: 6rem;
+    color: rgb(255, 153, 0);
+}
+
+.values .reverse{
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: baseline;
+
+}
+
+.values .blue{
+    color: rgb(21, 57, 165);
+}
+
+@media screen and (max-width:1000px) {
+    .values{
+        padding: 0 20px;
+    }
+    .values .text{
+        padding: 0 20px;
+    }
+    .values .container .box{
+        width: 100%;
+    }
+}
+
+/* contact */
 .contact{
     display: flex;
     flex-flow: column;
@@ -303,6 +518,7 @@ nav .logo{
 .contact p{
     text-align: center;
     padding: 0 100px;
+    color: #333;
 }
 
 .contact .contact-container{
@@ -377,4 +593,53 @@ nav .logo{
     .contact input{
         width: 100%;
     }
+}
+
+
+/* reviews */
+.reviews{
+    width: 100%;
+    /* padding: 0 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background: #efefef;
+}
+
+.reviews .slider-container{
+    max-width: 1120px;
+    width: 100%;
+}
+
+
+.reviews .wrapper{
+    margin:  0 40px;
+    padding: 40px 10px;
+    background: rgb(172, 146, 146);
+}
+
+.reviews .slide-box,
+.reviews .text-review{
+    text-align: center;
+    padding: 10px 14px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 25px;
+    width: 250px;
+}
+
+
+.reviews img{
+    border-radius: 100%;
+    width: 80px;
+    margin: 10px;
+}
+
+@media screen and (max-width:1000px) {
+   
 }

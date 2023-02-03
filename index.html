@@ -13,7 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -36,24 +38,29 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto fs-6">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#" id="tohome">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#" id="to-services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#" id="to-projects">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#" id="to-contacts">Contact us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
+              <li class="nav-item quote">
+                <button class="quotebtn">Get Quote</button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+
+      <!-- sticky arrow -->
+      <div class="arrow">
+        <i class="fa-solid fa-arrow-up icon"></i>
+      </div>
 
       <!-- hero -->
       <section class="hero">
@@ -67,12 +74,36 @@
         </div>
       </section>
 
+      <!-- modal -->
+      <div class="modal-quote" data-aos="flip-right">
+        <div class="container">
+          <h3>Get a Quote</h3>
+          <div class="box">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="number">Phone Number</label>
+            <input type="text" name="number" id="number" required>
+            <label for="message">Message</label>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <div class="submit">
+              <button type="submit" class="submit">Submit</button>
+              <button class="closebtn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- images -->
       <section class="images">
-        <img src="images/Free Vector _ Excavator and construction logo with buildings.jpg" alt="">
-        <img src="images/Real Estate Logo Design.jpg" alt="">
-        <img src="images/Real Estates Logo PNG Transparent, Vector Real Estate Logo Free Logo Design Template, Property Logo, Corporate Logo, Vector PNG Image For Free Download.jpg" alt="">
-        <img src="images/Real Estate Building Vector Art PNG, Real Estate Building Logo, Logo, Design, Template PNG Image For Free Download.png" alt="">
+        <h3>Our trusted partners</h3>
+        <div class="images-box">
+          <img src="images/Free Vector _ Excavator and construction logo with buildings.jpg" alt="">
+          <img src="images/Real Estate Logo Design.jpg" alt="">
+          <img src="images/Real Estates Logo PNG Transparent, Vector Real Estate Logo Free Logo Design Template, Property Logo, Corporate Logo, Vector PNG Image For Free Download.jpg" alt="">
+          <img src="images/Real Estate Building Vector Art PNG, Real Estate Building Logo, Logo, Design, Template PNG Image For Free Download.png" alt="">
+        </div>
       </section>
 
       <!-- our services -->
@@ -118,7 +149,7 @@
         <h3>Our Projects</h3>
         <p>We have worked on ground breaking projects.</p>
                 <!-- Slider main container -->
-        <div class="swiper">
+        <div class="swiper swiper-container1">
             <!-- Slides -->
             <div class="swiper-wrapper">
               <div class="swiper-slide" id="image">
@@ -183,6 +214,44 @@
       </div>
       </section>
 
+      <!-- core values section -->
+      <section class="values">
+        <h3>Our Core Values</h3>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum quibusdam laborum, vero voluptatem, itaque molestiae mollitia rerum esse nesciunt nihil? Iusto, tempore in!</p>
+        <div class="container">
+          <div class="box">
+            <div class="icon"><i class="fa-solid fa-house"></i></div>
+            <div class="desc">
+              <h3>Great Services</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, error accusantium!</p>
+            </div>
+          </div>
+          <div class="box reverse">
+            <div class="icon" style="color: rgb(21, 57, 165);"><i class="fa-solid fa-gears"></i></div>
+            <div class="desc">
+              <h3>High Standards</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, error accusantium!</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i class="fa-solid fa-users"></i></div>
+            <div class="desc">
+              <h3>Professional Team</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, error accusantium!</p>
+            </div>
+          </div>
+          <div class="box reverse">
+            <div class="icon blue" style="color: rgb(21, 57, 165);"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="desc">
+              <h3>Creative Solutions</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, error accusantium!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- contact section -->
       <section class="contact">
         
         <h3>Contact us</h3>
@@ -203,15 +272,98 @@
         
       </section>
 
+      <!-- reviews -->
+      <section class="reviews">
+        <div class="slider-container swiper">
+          <div class="wrapper swiper-wrapper">
+            <div class="swiper-slide slide-box">
+              
+                <div class="img img-1"><img src="images/pic-1.png" alt=""></div>
+                <div class="text-review">
+                  <h4>John Doe</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod deserunt a, asperiores culpa optio dolorum ducimus?</p>
+                </div>
+              
+            </div>
+            
+          </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      
 
 
 
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- <section class="reviews">
+        <div class="container">
+          <div class="my-slider">
+            <div class="slide-wrapper">
+              <div class="slide">
+                <div class="img img-1"></div>
+                <div class="text-review">
+                  <h4>John Doe</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod deserunt a, asperiores culpa optio dolorum ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-wrapper">
+              <div class="slide">
+                <div class="img img-1"></div>
+                <div class="text-review">
+                  <h4>John Doe</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod deserunt a, asperiores culpa optio dolorum ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-wrapper">
+              <div class="slide">
+                <div class="img img-1"></div>
+                <div class="text-review">
+                  <h4>John Doe</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod deserunt a, asperiores culpa optio dolorum ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-wrapper">
+              <div class="slide">
+                <div class="img img-1"></div>
+                <div class="text-review">
+                  <h4>John Doe</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod deserunt a, asperiores culpa optio dolorum ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-wrapper">
+              <div class="slide">
+                <div class="img img-1"></div>
+                <div class="text-review">
+                  <h4>John Doe</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod deserunt a, asperiores culpa optio dolorum ducimus?</p>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+        
+      </section> -->
 
+      
+
+
+   
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
 </body>
 </html>
