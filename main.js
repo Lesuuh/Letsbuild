@@ -1,38 +1,38 @@
 
-// var swiper1 = new Swiper(".swiper", {
-//   slidesPerView: 1,
-//   spaceBetween: 10,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   autoplay: {
-//     delay: 2500, // delay time in ms
-//     disableOnInteraction: false, // allows autoplay to be stopped/resumed by user interaction
-//   },
-//   breakpoints: {
-//     400: {
-//       slidesPerView: 1,
-//       spaceBetween: 10,
-//     },
-//     640: {
-//       slidesPerView: 2,
-//       spaceBetween: 20,
-//     },
-//     768: {
-//       slidesPerView: 3,
-//       spaceBetween: 40,
-//     },
-//     1024: {
-//       slidesPerView: 5,
-//       spaceBetween: 10,
-//     },
-//   },
-// });
+var swiper1 = new Swiper(".swiper1", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  autoplay: {
+    delay: 2500, // delay time in ms
+    disableOnInteraction: false, // allows autoplay to be stopped/resumed by user interaction
+  },
+  breakpoints: {
+    400: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+  },
+});
 
 
   AOS.init();
@@ -88,64 +88,10 @@ closebtn.addEventListener("click", ()=> {
 })
 
 
-// carousel 
-// var slider = tns({
-//   container: '.my-slider',
-//   items: 1,
 
-//   responsive: {
-//     640: {
-//       // edgePadding: 20,
-//       gutter: 20,
-//       items: 2
-//     },
-//     700: {
-//       gutter: 30
-//     },
-//     1200: {
-//       items: 3,
-//       gutter: 20,
-     
-//     }
-//   },
-//   autoplay: true,
-//   controls: false,
-//   autoplayTimeout: 5000,
-//   autoplayButtonOutput: false,
-//   "speed": 2000,
-//   "nav": false,
-//   "slideBy" : 1,
-
-// });
-
-
-
-// const slider = tns({
-//   container: '.my-slider',
-//   loop: true,
-//   items: 1,
-   
-//   autoplay: true,
-//   speed: 400,
-//   autoplayButtonOutput: false,
-//   mouseDrag: true,
-//   lazyload: true,
-//   controlsContainer: "#customize-controls",
-//   responsive: {
-//       640: {
-//           items: 2,
-//       },
-      
-//       768: {
-//           items: 3,
-//       }
-//   }
-
-// });
-
-var slider = new Swiper(".swiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+var swiper = new Swiper(".swiper", {
+  slidesPerView: 1,
+  spaceBetween: 50,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -156,7 +102,22 @@ var slider = new Swiper(".swiper", {
     prevEl: '.swiper-button-prev',
   },
   autoplay: {
-    delay: 3000, // delay time in ms
+    delay: 4000, // delay time in ms
     disableOnInteraction: false, // allows autoplay to be stopped/resumed by user interaction
   },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+  // effect: "fade",
 });
